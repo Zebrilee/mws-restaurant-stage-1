@@ -3,25 +3,27 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Udacity Restaurant reviews course project" />
+  <meta name="description" content="Restaurant Info - Udacity course project" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <meta itemprop="name" content="Udacity Restaurant reviews course project">
+  <meta itemprop="name" content="Restaurant Info - Udacity course project">
   <meta itemprop="image" content="img/icon.png">
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="192x192" href="img/icon.png">
   <!-- Normalize.css for better cross-browser consistency -->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="manifest" href="manifest.json">
   <!-- Main CSS file -->
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <title>Restaurant Info</title>
 </head>
 
 <body class="inside">
+    <a class="skip" href="#neighborhoods-select">Skip to main content</a>
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
-    <nav>
+    <nav role="navigation">
       <h1>
         <a href="/">Restaurant Reviews</a>
       </h1>
@@ -40,14 +42,16 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container">
+    <section id="map-container" role="application">
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container">
       <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
+      <picture id="restaurant-picture">
+        <img id="restaurant-img">
+      </picture>
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
@@ -64,7 +68,7 @@
   <!-- Beginning footer -->
   <footer id="footer">
     Copyright (c) 2017
-    <a href="/">
+    <a href="/" role="link">
       <strong>Restaurant Reviews</strong>
     </a> All Rights Reserved.
   </footer>

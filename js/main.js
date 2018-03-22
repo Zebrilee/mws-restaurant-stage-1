@@ -1,6 +1,6 @@
 let restaurants,
-  neighborhoods,
-  cuisines
+    neighborhoods,
+    cuisines
 var map
 var markers = []
 
@@ -141,6 +141,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name +'\'s picture';
   li.append(image);
 
   const name = document.createElement('h1');
@@ -174,5 +175,23 @@ addMarkersToMap = (restaurants = self.restaurants) => {
       window.location.href = marker.url
     });
     self.markers.push(marker);
+  });
+}
+
+/**
+ * Add a service worker.
+ */
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service-worker.js', {
+      scope: '/'
+    })
+      .then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function(error) {
+        console.log('ServiceWorker registration failed: error:', error);
+      })
   });
 }

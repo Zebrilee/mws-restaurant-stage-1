@@ -21,7 +21,7 @@
     <a class="skip" href="#neighborhoods-select">Skip to main content</a>
   <header>
     <nav>
-      <h1>
+      <h1 role="heading" aria-level="1">
         <a href="/">Restaurant Reviews</a>
       </h1>
     </nav>
@@ -33,28 +33,28 @@
     </section>
     <section>
       <div class="filter-options">
-        <h2>Filter Results</h2>
+        <h2 role="heading" aria-level="2">Filter Results</h2>
         <div class="filter-select-container">
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-            <option value="all">All Neighborhoods</option>
+          <select id="neighborhoods-select" name="neighborhoods" aria-label="Select Neighborhood" onchange="updateRestaurants()">
+            <option value="all" aria-selected="true">All Neighborhoods</option>
           </select>
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-            <option value="all">All Cuisines</option>
+          <select id="cuisines-select" name="cuisines" aria-label="Select Cusisine" onchange="updateRestaurants()">
+            <option value="all" aria-selected="true">All Cuisines</option>
           </select>
         </div>
       </div>
-        <ul id="restaurants-list"></ul>
+        <ul id="restaurants-list" role="list"></ul>
     </section>
   </main>
-
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArRlxvQnvabzzLW3dZYDjNG_jXJTwY1BQ&libraries=places&callback=initMap"></script>
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=places&callback=initMap"></script>
+
 
 
   <footer id="footer">
     Copyright (c) 2017
-    <a href="/">
+    <a href="/" title="Go to the restaurant reviews homepage">
       <strong>Restaurant Reviews</strong>
     </a> All Rights Reserved.
   </footer>

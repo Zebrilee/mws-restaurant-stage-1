@@ -23,7 +23,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #3397db;
+  color: #0277bd;
 }
 
 h1,
@@ -47,10 +47,10 @@ a.skip {
   position: absolute;
 	top: -40px;
 	left: 0;
-	background-color: rgb(255, 165, 0);
+	background-color: #d43900;
 	color: white;
 	padding: 8px;
-	z-index: 100;
+	z-index: 1000;
 }
 
 a.skip:active,
@@ -103,13 +103,13 @@ nav h1 a {
 /* Add a color to all links inside the list */
 
 #breadcrumb li a {
-  color: #0275d8;
+  color: #0277bd;
 }
 
 /* Add a color on mouse-over */
 
 #breadcrumb li a:hover {
-  color: #01447e;
+  color: #0277bd;
   text-decoration: underline;
 }
 
@@ -118,7 +118,6 @@ nav h1 a {
 #map {
   height: 400px;
   width: 100%;
-  background-color: #ccc;
 }
 
 /* ====================== Restaurant Filtering ====================== */
@@ -126,7 +125,7 @@ nav h1 a {
 .filter-options {
   width: 100%;
   min-height: 50px;
-  background-color: #3397db;
+  background-color: #0277bd;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +153,6 @@ nav h1 a {
 /* ====================== Restaurant Listing ====================== */
 
 #restaurants-list {
-  background-color: #f3f3f3;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
@@ -183,7 +181,7 @@ nav h1 a {
 }
 
 #restaurants-list li h1 {
-  color: #f18200;
+  color: #d43900;
   font-size: 1.2em;
   font-weight: 200;
   line-height: 1.3;
@@ -196,14 +194,12 @@ nav h1 a {
 }
 
 #restaurants-list li a {
-  background-color: #f18200;
+  background-color: #d43900;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
   margin: 15px 0 0;
   padding: 8px 30px 10px;
-  text-align: center;
-  text-decoration: none;
   text-transform: uppercase;
 }
 
@@ -213,7 +209,7 @@ header {
   position: sticky;
   top: 0;
   width: 100vw;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .inside #map-container {
@@ -231,7 +227,7 @@ header {
 }
 
 #restaurant-name {
-  color: #f18200;
+  color: #d43900;
   font-size: 1.6em;
   font-weight: 200;
   margin: 15px 0 30px;
@@ -272,7 +268,7 @@ header {
 }
 
 #reviews-container h2 {
-  color: #f58500;
+  color: #d43900;
   font-size: 2em;
   font-weight: 300;
   padding-bottom: 1pt;
@@ -311,7 +307,7 @@ header {
   margin-bottom: 10px;
 }
 .review-rating{
-  background-color: rgb(255, 165, 0);
+  background-color: #d43900;
 	width: 75px;
 	text-align:center;
 	border-radius: 3%;
@@ -335,7 +331,7 @@ header {
 
 #footer {
   background-color: #444;
-  color: #aaa;
+  color: #eee;
   font-size: 0.8em;
   letter-spacing: 1px;
   text-align: center;
@@ -347,7 +343,7 @@ header {
 }
 
 #footer a {
-  color: #f18200
+  color: #ff9800
 }
 
 /* ====================== Responsive ====================== */

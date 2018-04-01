@@ -56,7 +56,6 @@ a.skip {
 a.skip:active,
 a.skip:focus {
   top: 0;
-
 }
 
 /* ====================== Navigation ====================== */
@@ -81,7 +80,7 @@ nav h1 a {
 #breadcrumb {
   padding: 10px 40px 16px;
   list-style: none;
-  background-color: #eee;
+  background-color: #fff;
   margin: 0;
   width: calc(50% - 80px);
 }
@@ -319,12 +318,17 @@ header {
 }
 
 .review-date {
-  color: #aaa;
+  color: #eee;
   font-size: 0.9em;
 }
 
 #restaurant-hours td {
-  color: #666;
+  color: #424242;
+}
+
+#restaurant-caption{
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 /* ====================== Footer ====================== */
@@ -344,50 +348,4 @@ header {
 
 #footer a {
   color: #ff9800
-}
-
-/* ====================== Responsive ====================== */
-
-@media screen and (min-width:500px) and (max-width:699px) {
-  #restaurants-list li {
-    width: 350px;
-  }
-}
-
-@media screen and (max-width:754px) {
-  nav h1 a {
-    letter-spacing: 0;
-  }
-  .inside #map-container {
-    width: 100vw;
-    height: 55vw;
-    position: inherit;
-  }
-  #breadcrumb {
-    width: calc(100% - 80px);
-  }
-  #restaurant-container,
-  #reviews-container {
-    width: calc(100vw - 60px);
-  }
-  #restaurant-container {
-    padding: 40px 30px;
-  }
-  #restaurants-list li {
-    margin: 10px 5px;
-    padding: 0 25px 40px;
-  }
-  .filter-select-container {
-    text-align: center;
-  }
-  #reviews-list li {
-    width: 90%;
-  }
-  #reviews-list li div {
-    padding: 10px 6px;
-  }
-  #footer {
-    padding: 25px 20px;
-    width: calc(100% - 40px);
-  }
 }

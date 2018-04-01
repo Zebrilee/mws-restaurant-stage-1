@@ -98,6 +98,8 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.setAttribute('aria-level', '2');
+  title.setAttribute('role', 'heading');
 
   container.appendChild(title);
 
@@ -168,4 +170,22 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+/**
+ * Add a service worker.
+ */
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('service-worker.js', {
+      scope: '/'
+    })
+      .then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }).catch(function(error) {
+        console.log('ServiceWorker registration failed: error:', error);
+      })
+  });
 }

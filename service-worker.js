@@ -18,7 +18,7 @@ var filesToCache = [
   'js/restaurant_info.js'
 ];
 
-var cacheName = 'restaurant-review-cache-v1';
+var cacheName = 'restaurant-review-cache-v2';
 
 // Listen for install event, set callback
 self.addEventListener('install', function(event) {

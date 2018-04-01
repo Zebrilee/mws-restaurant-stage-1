@@ -151,6 +151,10 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 
+#restaurant-img {
+  border-radius: 20px 0;
+}
+
 #restaurants-list {
   list-style: outside none none;
   margin: 0;

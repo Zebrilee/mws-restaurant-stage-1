@@ -41,16 +41,16 @@ li {
   padding: 0;
 }
 
-/* ====================== Skip to maincontent link ====================== */
+/* ====================== Skip the map link ====================== */
 
 a.skip {
   position: absolute;
-	top: -40px;
-	left: 0;
-	background-color: #d43900;
-	color: white;
-	padding: 8px;
-	z-index: 1000;
+  top: -40px;
+  left: 0;
+  background-color: #d43900;
+  color: white;
+  padding: 8px;
+  z-index: 1000;
 }
 
 a.skip:active,
@@ -158,6 +158,7 @@ nav h1 a {
   background-color: #d43900;
   color: #fff;
 }
+
 /* ====================== Restaurant Listing ====================== */
 
 #restaurant-img {
@@ -178,25 +179,20 @@ nav h1 a {
   border: 1px solid #ccc;
   border-radius: 20px 0;
   margin: 15px;
-  min-height: 380px;
   padding: 0 30px 25px;
-  text-align: left;
   width: 270px;
 }
 
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
-  margin: 0;
   max-width: 100%;
-  min-height: 248px;
 }
 
 #restaurants-list li h1 {
   color: #d43900;
   font-size: 1.2em;
   font-weight: 200;
-  line-height: 1.3;
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
@@ -215,7 +211,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 
-#restaurants-list li a:focus{
+#restaurants-list li a:focus {
   color: #d43900;
   background-color: #fff;
 }
@@ -252,7 +248,7 @@ header {
   line-height: 1.1;
 }
 
-#restaurant-name:focus{
+#restaurant-name:focus {
   background-color: #d43900;
   color: #fff;
 }
@@ -277,7 +273,7 @@ header {
   width: 90%;
 }
 
-#restaurant-cuisine:focus{
+#restaurant-cuisine:focus {
   background: #d43900;
 }
 
@@ -300,7 +296,7 @@ header {
   padding-bottom: 1pt;
 }
 
-#reviews-container h2:focus{
+#reviews-container h2:focus {
   background-color: #d43900;
   color: #fff;
 }
@@ -337,12 +333,13 @@ header {
   padding: 10px;
   margin-bottom: 10px;
 }
-.review-rating{
+
+.review-rating {
   background-color: #d43900;
-	width: 75px;
-	text-align:center;
-	border-radius: 3%;
-	color: white;
+  width: 75px;
+  text-align: center;
+  border-radius: 3%;
+  color: white;
 }
 
 .reviewer {
@@ -358,7 +355,7 @@ header {
   color: #424242;
 }
 
-#restaurant-caption{
+#restaurant-caption {
   font-size: 1.2em;
   font-weight: 500;
 }

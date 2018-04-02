@@ -32,52 +32,52 @@ var filesToCache = [
 var cacheName = 'restaurant-review-cache-v3';
 
 // Listen for install event, set callback
-self.addEventListener('install', function(event) {
+self.addEventListener('install', function (event) {
   console.log('Attempting to install service worker and cache static assets');
   event.waitUntil(
     caches.open(cacheName)
-    .then(function(cache) {
+    .then(function (cache) {
       return cache.addAll(filesToCache);
     })
   );
 });
 //fetch event in order to cache them
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', function (event) {
   console.log('Fetch event for ', event.request.url);
   event.respondWith(
-    caches.match(event.request).then(function(response) {
+    caches.match(event.request).then(function (response) {
       if (response) {
         console.log('Found ', event.request.url, ' in cache');
         return response;
       }
       console.log('Network request for ', event.request.url);
-      return fetch(event.request).then(function(response) {
+      return fetch(event.request).then(function (response) {
         if (response.status === 404) {
           return caches.match('404.html');
         }
-        return caches.open(cacheName).then(function(cache) {
+        return caches.open(cacheName).then(function (cache) {
           if (event.request.url.indexOf('test') < 0) {
             cache.put(event.request.url, response.clone());
           }
           return response;
         });
       });
-    }).catch(function(error) {
+    }).catch(function (error) {
       console.log('Error, ', error);
       return caches.match('offline.html');
     })
   );
 });
 
-self.addEventListener('activate', function(event) {
+self.addEventListener('activate', function (event) {
   console.log('Activating new service worker...');
 
   var cacheWhitelist = [cacheName];
 
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
+    caches.keys().then(function (cacheNames) {
       return Promise.all(
-        cacheNames.map(function(cacheName) {
+        cacheNames.map(function (cacheName) {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
@@ -86,4 +86,3 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
-

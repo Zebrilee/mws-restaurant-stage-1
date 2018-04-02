@@ -160,7 +160,7 @@ createReviewHTML = (review) => {
 /**
  * Add restaurant name to the breadcrumb navigation menu
  */
-fillBreadcrumb = (restaurant=self.restaurant) => {
+fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
@@ -188,14 +188,14 @@ getParameterByName = (name, url) => {
  */
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     navigator.serviceWorker.register('service-worker.js', {
-      scope: '/'
-    })
-      .then(function(registration) {
+        scope: '/'
+      })
+      .then(function (registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }).catch(function(error) {
+      }).catch(function (error) {
         console.log('ServiceWorker registration failed: error:', error);
       })
   });

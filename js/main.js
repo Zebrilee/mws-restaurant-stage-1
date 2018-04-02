@@ -1,6 +1,6 @@
 let restaurants,
-    neighborhoods,
-    cuisines
+  neighborhoods,
+  cuisines
 var map
 var markers = []
 
@@ -143,13 +143,13 @@ createRestaurantHTML = (restaurant) => {
 
   /* add two sources with srcset and media for the picture tag */
   const sourceSmall = document.createElement('source');
-  sourceSmall.setAttribute('class','source-small');
+  sourceSmall.setAttribute('class', 'source-small');
   sourceSmall.srcset = DBHelper.smallImageUrlForRestaurant(restaurant) + ' 1x';
   sourceSmall.media = '(max-width: 450px)';
   picture.append(sourceSmall);
 
   const sourceLarge = document.createElement('source');
-  sourceLarge.setAttribute('class','source-Large');
+  sourceLarge.setAttribute('class', 'source-Large');
   sourceLarge.srcset = DBHelper.imageUrlForRestaurant(restaurant);
   sourceLarge.media = '(min-width: 451px)';
   picture.append(sourceLarge);
@@ -202,14 +202,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
  */
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     navigator.serviceWorker.register('service-worker.js', {
-      scope: '/'
-    })
-      .then(function(registration) {
+        scope: '/'
+      })
+      .then(function (registration) {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }).catch(function(error) {
+      }).catch(function (error) {
         console.log('ServiceWorker registration failed: error:', error);
       })
   });

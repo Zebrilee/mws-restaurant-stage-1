@@ -60,6 +60,16 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.alt = restaurant.name + ' Restaurant';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
+  /* add two sources with srcset and media for the picture tag */
+  const sourceSmall = document.getElementById('picture-small');
+  sourceSmall.srcset = DBHelper.smallImageUrlForRestaurant(restaurant);
+  sourceSmall.media = '(max-width: 450px)';
+
+  const sourceLarge = document.getElementById('picture-large');
+  sourceLarge.srcset = DBHelper.imageUrlForRestaurant(restaurant);
+  sourceLarge.media = '(min-width: 451px)';
+
+
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
 
@@ -100,6 +110,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   title.innerHTML = 'Reviews';
   title.setAttribute('aria-level', '2');
   title.setAttribute('role', 'heading');
+  title.setAttribute('tabindex', '0')
 
   container.appendChild(title);
 

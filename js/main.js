@@ -138,11 +138,27 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
+  const picture = document.createElement('picture');
+  li.append(picture);
+
+  /* add two sources with srcset and media for the picture tag */
+  const sourceSmall = document.createElement('source');
+  sourceSmall.setAttribute('class','source-small');
+  sourceSmall.srcset = DBHelper.smallImageUrlForRestaurant(restaurant) + ' 1x';
+  sourceSmall.media = '(max-width: 450px)';
+  picture.append(sourceSmall);
+
+  const sourceLarge = document.createElement('source');
+  sourceLarge.setAttribute('class','source-Large');
+  sourceLarge.srcset = DBHelper.imageUrlForRestaurant(restaurant);
+  sourceLarge.media = '(min-width: 451px)';
+  picture.append(sourceLarge);
+
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = restaurant.name + ' Restaurant';
-  li.append(image);
+  picture.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
@@ -161,7 +177,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.setAttribute('aria-label', `Link for more information about ${restaurant.name}`);
+  more.setAttribute('aria-label', `More informations about ${restaurant.name}`);
   li.append(more)
 
   return li

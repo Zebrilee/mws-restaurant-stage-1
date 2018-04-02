@@ -1,7 +1,7 @@
 
 /* ====================== Responsive ====================== */
 @media screen and (max-width:640px) {
-  #reviews-list li p {
+  .review-date {
     font-size: 0.75em;
   }
 }

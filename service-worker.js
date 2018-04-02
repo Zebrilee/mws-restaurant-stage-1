@@ -2,6 +2,7 @@ var filesToCache = [
   '/',
   'restaurant.html',
   'css/styles.css',
+  'css/responsive.css',
   'data/restaurants.json',
   'img/1.jpg',
   'img/2.jpg',
@@ -13,12 +14,22 @@ var filesToCache = [
   'img/8.jpg',
   'img/9.jpg',
   'img/10.jpg',
+  'img/small-1.jpg',
+  'img/small-2.jpg',
+  'img/small-3.jpg',
+  'img/small-4.jpg',
+  'img/small-5.jpg',
+  'img/small-6.jpg',
+  'img/small-7.jpg',
+  'img/small-8.jpg',
+  'img/small-9.jpg',
+  'img/small-10.jpg',
   'js/main.js',
   'js/dbhelper.js',
   'js/restaurant_info.js'
 ];
 
-var cacheName = 'restaurant-review-cache-v2';
+var cacheName = 'restaurant-review-cache-v3';
 
 // Listen for install event, set callback
 self.addEventListener('install', function(event) {

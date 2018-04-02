@@ -26,14 +26,7 @@ a:focus {
   color: #0277bd;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 0 20px;
-}
+h1, h2, h3, h4, h5, h6 { margin: 0 0 20px; }
 
 ul,
 li {
@@ -189,7 +182,7 @@ nav h1 a {
   max-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #d43900;
   font-size: 1.2em;
   font-weight: 200;

@@ -6,7 +6,7 @@ module.exports = function (grunt) {
         options: {
           engine: 'gm',
           sizes: [{
-            width: 600,
+            width: 300,
             quality: 50
           }]
         },
